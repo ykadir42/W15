@@ -26,18 +26,23 @@ var randomStudent = function(){
 	return students[Math.floor(Math.random() * students.length)];
 };
 
-var buttonCallback = function(e){
-    console.log("\n\nhere comes e...");
-    console.log(e);
-    console.log("\n\nhere comes 'this'...");
-    console.log(this);
+var fibonacciButton = function(e){
+    console.log("fibonacci(5): " + fibonacci(5));
+}
+
+var gcdButton = function(e){
+    console.log("gcd(5040, 6000): " + gcd(5040, 6000));
+}
+
+var randomStudentButton = function(e){
+    console.log("randomStudent(): " + randomStudent());
 }
 
 var b = document.getElementById('fibonacci');
-b.addEventListener('click', fibonacci);
+b.addEventListener('click', fibonacciButton);
 
 var b = document.getElementById('gcd');
-b.addEventListener('click', gcd);
+b.addEventListener('click', gcdButton);
 
 var b = document.getElementById('randomStudent');
-b.addEventListener('click', randomStudent);
+b.addEventListener('click', randomStudentButton);
