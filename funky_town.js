@@ -1,3 +1,8 @@
+//Jawadul Kadir and Taylor Wong
+//SoftDev1 pd7
+//HW15 -- Sequential Progression
+//2000-12-07
+
 var fibonacci = function(n) {
 	if (n < 2) {
 		return n;
@@ -20,3 +25,19 @@ var randomStudent = function(){
 	var students = ["Alice", "Bailey", "Candace", "Derek"];
 	return students[Math.floor(Math.random() * students.length)];
 };
+
+var buttonCallback = function(e){
+    console.log("\n\nhere comes e...");
+    console.log(e);
+    console.log("\n\nhere comes 'this'...");
+    console.log(this);
+}
+
+var b = document.getElementById('fibonacci');
+b.addEventListener('click', fibonacci);
+
+var b = document.getElementById('gcd');
+b.addEventListener('click', gcd);
+
+var b = document.getElementById('randomStudent');
+b.addEventListener('click', randomStudent);
